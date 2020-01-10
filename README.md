@@ -1,19 +1,19 @@
 # WORDPRESS DEPLOYMENT ON AWS EC2 
-## First we will launch an ec2 instance
+## First launch an ec2 instance
   for learning in detail how to launch ec2 instance 
   
-## After launching an ec2 we will install apache-httpd and start it's service
+## After launching an ec2 ,install apache-httpd and start it's service
 ```
 root@jarvis:~# yum install httpd -y
 root@jarvis:~# systemctl enable --now httpd
 ```
-## Now install mysql or mariadb for database and start it's service
+##  install mysql or mariadb for database and start it's service
 
 ```
 root@jarvis:~#  yum install mariadb-server
 root@jarvis:~# systemctl start mariadb
 ```
-### After starting it's service we need to log in to mariadb 
+### After starting it's service ,log in to mariadb 
 ```
 root@jarvis:~# mysql_secure_installation 
 NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
@@ -79,7 +79,7 @@ Thanks for using MariaDB!
 
 ```
 
-## Now we need to install php but for installing latest version of php we need to install epel and then install php 7.2
+## Now install php but for installing latest version of php first install epel and then install php 7.2
 ```
 root@jarvis:~# amazon-linux-extras install epel
 root@jarvis:~# amazon-linux-extras install php7.2

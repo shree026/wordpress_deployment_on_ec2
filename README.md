@@ -1,6 +1,5 @@
 # WORDPRESS DEPLOYMENT ON AWS EC2 
 ## First launch an ec2 instance
-  for learning in detail how to launch ec2 instance 
   
 ## After launching an ec2 ,install apache-httpd and start it's service
 ```

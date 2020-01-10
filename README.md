@@ -102,7 +102,11 @@ root@jarvis:~# tar -xzvf latest.tar.gz
 ```
 root@jarvis:~# mv wordpress blog
 ```
-### Move to that direcory and take a backup of  
+### Move to that direcory and take a backup of wp-config-sample.php
+```
+root@jarvis:~# cp wordpress/wp-config-sample.php wordpress/wp-config.php
+
+```
 
 ## To create a database for wordpress installation
 
@@ -130,3 +134,24 @@ Exit the mysql client
 ```
 exit
 ```
+
+### Edit wp-config.php
+```
+vim wordpress/wp-config.php
+define('DB_NAME', 'wordpress-db');
+define('DB_USER', 'wordpress-user');
+define('DB_PASSWORD', 'your_strong_password');
+```
+
+### Now restart your httpd service
+```
+root@jarvis:~# systemctl restart httpd
+```
+## Now put your DNS into your browser and run wordpress !!!
+```
+ec2-13-235-50-157.ap-south-1.compute.amazonaws.com/blog
+```
+
+![wordpress](wordpress.png)
+
+### If you see this window then bingo your wordpress is successfully deployed on ec2 instance !!!!
